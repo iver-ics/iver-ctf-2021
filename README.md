@@ -72,8 +72,10 @@ Other's writeups:
 ## License
 
 This repository does not employ any open source license (yet). This means all
-content inside this repository falls under EU's copyright laws.
+content inside this repository falls under EU's copyright law, with Iver as the
+copyright holder.
 
 ---
 
-Maintained by [Iver](https://www.iver.com/en).
+Maintained by [Iver](https://www.iver.com/en).\
+Copyright &copy; 2021 Iver
