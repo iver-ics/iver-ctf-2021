@@ -1,0 +1,30 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "chall_name"
+author: "John Smith"
+category: pwn
+description: Really nice challenge
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 100
+
+connection_info: nc 2021.santahack.xyz 666
+
+flags:
+    - ctf{some_funny_l33t_string}
+
+tags:
+    - pwn
+
+files:
+    - src/chall_name.c
+    - src/chall_name
+
+hints:
+    - CTF is nice
+

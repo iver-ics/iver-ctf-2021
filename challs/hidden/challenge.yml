@@ -1,0 +1,22 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "Hidden Present"
+author: "Björn Österman"
+category: misc
+description: Where is it?
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 100
+
+connection_info: nc 2021.santahack.xyz 42022
+
+flags:
+    - haxmas{easy_peacy_lemon_squizy}
+
+tags:
+    - misc

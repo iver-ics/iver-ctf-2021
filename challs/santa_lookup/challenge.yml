@@ -1,0 +1,20 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "Santa Policy Framework"
+author: "Robert Teir"
+category: OSINT
+description: Santa has hidden the flag where everyone can look it up.
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 50
+
+flags:
+    - haxmas{so_you_have_heard_about_txt_records}
+
+tags:
+    - OSINT

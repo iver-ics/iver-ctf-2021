@@ -1,0 +1,29 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "X-Mas-For"
+author: "Kalle Fagerberg"
+category: web
+description: Santa's senior security advisors has coded up their new credentials store, and have ensured that only Santas local networks can access it for obvious reasons. They have worked really hard on this, so you should probably give up already.
+
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 100
+
+connection_info: curl 2021.santahack.xyz 42004
+
+flags:
+    - haxmas{begin-ahead-of-the-headers}
+
+tags:
+    - web
+
+files: []
+
+hints:
+    - "\"Bypass\" is a good research keyword"
+

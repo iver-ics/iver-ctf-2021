@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Forbidden</title>
+  </head>
+  <body>
+    <h1>Forbidden</h1>
+    <p>Your IP is not in the allowed list.</p>
+    <p>Santa's evil ICS elves has locked this site down to only be accessible via:</p>
+    <ul>
+      {{- range .Nets }}
+      <li><pre>{{ . }}</pre></li>
+      {{- end }}
+    </ul>
+  </body>
+</html>

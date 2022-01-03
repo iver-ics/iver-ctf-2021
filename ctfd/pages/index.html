@@ -1,0 +1,143 @@
+<div class="row">
+    <div class="col-md-6 offset-md-3 xmas-card">
+        <img class="w-100 mx-auto d-block" style="max-width: 500px;padding: 50px;padding-top: 14vh;" src="https://movietvtechgeeks.com/wp-content/uploads/2016/12/top-6-tips-to-keep-your-holiday-online-shopping-hacker-proof-safe-2016-images.jpg" />
+        <h3 class="text-center">
+            {{ctf_name}}
+        </h3>
+        <p class="text-center">
+            {{ctf_description}}
+        </p>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-8 offset-md-2 xmas-card">
+        <pre class="console countdown"><code class="language-console">$ ./countdown.sh "$DATE_START" "$DATE_END"
+<span class="output">SECONDS   MINUTES  HOURS  DAYS</span>
+<span class="output-light" id="countdownBegin" data-datetime="{{ctf_start}}">487305s   8121m    135h   5d</span>
+
+<span class="output">SECONDS   MINUTES  HOURS  DAYS</span>
+<span class="output-light" id="countdownEnd" data-datetime="{{ctf_end}}">919305s   15321m   255h   10d</span></code></pre>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-8 offset-md-2 xmas-card">
+        <pre class="console"><code class="language-console">$ ls categories
+<span class="output">crypto	  osint  reversing
+forensic  pwn	 web</span></code>
+
+<code class="language-console">$ cat location.md
+<span class="output">&dash; Reg: <a href="https://2021.santahack.xyz">&lt;https://2021.santahack.xyz&gt;</a>
+&dash; Comms: TEAMS #2021 - Santa Hack</span></code>
+
+<code class="language-console">$ cat difficulty.txt
+<span class="output">Difficulty: [EASY =&gt; MEDIUM]</span></code>
+
+<code class="language-console">$ cat rules.yaml
+<span class="output">teamSize:
+&nbsp;&nbsp;min: 1
+&nbsp;&nbsp;max: null
+email: &gt;-
+&nbsp;&nbsp;^.*(@iver\.(com|se|no|pl)|@aztek\.no|@nogui\.se|@citynetworks\.eu)$</span></code>
+
+<code class="language-console">$ date -Is -u -d "$DATE_START"
+<span class="output output-datetime" data-datetime="{{ctf_start}}">0000-00-00T00:00:00+00:00</span></code>
+
+<code class="language-console">$ date -Is -u -d "$DATE_END"
+<span class="output output-datetime" data-datetime="{{ctf_end}}">0000-00-00T00:00:00+00:00</span></code></pre>
+    </div>
+</div>
+
+<style type="text/css">
+.countdown {
+    font-size: larger;
+}
+
+.console {
+    padding: 1em;
+    background-color: var(--dark);
+    border-radius: 0.25rem;
+}
+
+.console,
+.console p {
+    margin: 0;
+}
+
+.console code {
+    background: none;
+    color: var(--primary);
+    border-radius: 0.25rem;
+    padding: 0;
+}
+
+.console .output {
+    color: var(--gray);
+}
+
+.console .output-light {
+    color: var(--light);
+}
+
+.console .passed {
+    font-weight: 900;
+    color: var(--success);
+}
+</style>
+
+<script type="text/javascript">
+    window.addEventListener('load', function() {
+        updateCountdown('countdownBegin', '// Let\'s begin! 🎉');
+        updateCountdown('countdownEnd', '// It\'s over!');
+
+        $('.output-datetime[data-datetime]').each(function(idx, elem) {
+            const date = new Date(elem.dataset.datetime);
+            const year = date.getUTCFullYear().toString();
+            const month = (date.getUTCMonth() + 1).toString().padStart(2, '0');
+            const day = date.getUTCDate().toString().padStart(2, '0');
+            const hour = date.getUTCHours().toString().padStart(2, '0');
+            const minutes = date.getUTCMinutes().toString().padStart(2, '0');
+            const seconds = date.getUTCSeconds().toString().padStart(2, '0');
+            elem.innerText = `${year}-${month}-${day}T${hour}:${minutes}:${seconds}+00:00`;
+        });
+    })
+
+    function updateCountdown(elemId, postDateString) {
+        const date = new Date(document.getElementById(elemId).dataset.datetime);
+        const dateTimeMs = date.getTime();
+        const interval = setInterval(function() {
+            const deltaMs = updateCountdownElem(elemId, dateTimeMs, postDateString);
+            if (deltaMs <= 0) {
+                clearInterval(interval);
+            }
+        }, 1000);
+
+        updateCountdownElem(elemId, dateTimeMs, postDateString);
+    }
+
+    function updateCountdownElem(elemId, dateTimeMs, postDateString) {
+        const elem = document.getElementById(elemId);
+        const deltaMs = dateTimeMs - new Date().getTime()
+        const str = formatDuration(deltaMs);
+        if (deltaMs <= 0) {
+            elem.innerText = str + ' ' + postDateString;
+            $(elem).addClass('passed');
+        } else {
+            elem.innerHTML = str;
+        }
+        return deltaMs;
+    }
+
+    function formatDuration(deltaMs) {
+        if (deltaMs < 0) {
+            return '0s        0m       0h     0d  ';
+        }
+        const deltaS = Math.floor(deltaMs / 1000) + 's';
+        const deltaM = Math.floor(deltaMs / 1000 / 60) + 'm';
+        const deltaH = Math.floor(deltaMs / 1000 / 60 / 60) + 'h';
+        const deltaD = Math.floor(deltaMs / 1000 / 60 / 60 / 24) + 'd';
+
+        return deltaS.padEnd(10) + deltaM.padEnd(9) + deltaH.padEnd(7) + deltaD;
+    }
+</script>

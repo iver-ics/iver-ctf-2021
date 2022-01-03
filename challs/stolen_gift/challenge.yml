@@ -1,0 +1,22 @@
+version: "0.1"
+
+name: "Stolen Gift"
+author: "Pontus Norrström"
+category: misc
+description: Santa just turned 1e37 years old and has a bit of a mid life crisis and bought a hoj, only to have it stolen! Miscreants! Fortunately he had a tracker attached. Can you help extract the data?
+
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 100
+
+flags:
+    - haxmas{n3V3r_tRu5t_f1L3S}
+
+files:
+    - src/stolen_gift.jpg
+
+tags:
+    - misc

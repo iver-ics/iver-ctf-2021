@@ -1,0 +1,74 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "swedencentral"
+        },
+        "networkInterfaceName": {
+            "value": "vm-ctf-02202"
+        },
+        "networkSecurityGroupName": {
+            "value": "vm-ctf-02-nsg"
+        },
+        "networkSecurityGroupRules": {
+            "value": [
+                {
+                    "name": "SSH",
+                    "properties": {
+                        "priority": 300,
+                        "protocol": "TCP",
+                        "access": "Allow",
+                        "direction": "Inbound",
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRange": "*",
+                        "destinationAddressPrefix": "*",
+                        "destinationPortRange": "22"
+                    }
+                }
+            ]
+        },
+        "subnetName": {
+            "value": "default"
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/4ae1207f-c337-4e15-a859-d855990840ff/resourceGroups/rg-ctf/providers/Microsoft.Network/virtualNetworks/rg-ctf-vnet"
+        },
+        "publicIpAddressName": {
+            "value": "vm-ctf-02-ip"
+        },
+        "publicIpAddressType": {
+            "value": "Dynamic"
+        },
+        "publicIpAddressSku": {
+            "value": "Basic"
+        },
+        "virtualMachineName": {
+            "value": "vm-ctf-02"
+        },
+        "virtualMachineComputerName": {
+            "value": "vm-ctf-02"
+        },
+        "virtualMachineRG": {
+            "value": "rg-ctf"
+        },
+        "osDiskType": {
+            "value": "Premium_LRS"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_B2s"
+        },
+        "adminUsername": {
+            "value": "bjorn"
+        },
+        "adminPublicKey": {
+            "value": null
+        },
+        "diagnosticsStorageAccountName": {
+            "value": "saiverctf"
+        },
+        "diagnosticsStorageAccountId": {
+            "value": "/subscriptions/4ae1207f-c337-4e15-a859-d855990840ff/resourceGroups/rg-ctf/providers/Microsoft.Storage/storageAccounts/saiverctf"
+        }
+    }
+}

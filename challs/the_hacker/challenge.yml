@@ -1,0 +1,25 @@
+version: "0.1"
+
+name: "Hacker zipping glögg"
+author: "Pontus Norrström"
+category: OSINT
+description: "Santas Offensive Security Team has found a picture of the aformidable adversary. Can you help them find out where he was located at the time? Flag format: haxmas{The_Location}"
+
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 100
+
+flags:
+    - haxmas{Cyber_Link}
+    - haxmas{cyber_link}
+    - haxmas{CyberLink}
+    - haxmas{cyberlink}
+
+files:
+    - src/hacker_in_an_internet_cafe.jpg
+
+tags:
+    - osint

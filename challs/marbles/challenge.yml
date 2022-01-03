@@ -1,0 +1,23 @@
+name: "Lost his marbles"
+author: "Björn Österman"
+category: rev
+description: Santa lost some leet marbles in here
+
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 100
+
+flags:
+    - haxmas{pesky_little_marbles}
+
+tags:
+    - rev
+
+files:
+    - src/marbles
+
+hints:
+    - There is actually an unused argument sent with printf

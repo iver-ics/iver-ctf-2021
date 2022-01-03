@@ -1,0 +1,30 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "Santa's Broke"
+author: "Kalle Fagerberg"
+category: web
+description: Can you help Santa out of the finacial gopher hole?
+
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 100
+
+
+connection_info: nc 2021.santahack.xyz 70
+
+flags:
+    - haxmas{gemini1965-is-much-better-anyway}
+
+tags:
+    - web
+
+files: []
+
+hints:
+    - "\"A distributed document search and retrieval protocol\""
+    - "Port 70 is actually used for something."

@@ -1,0 +1,25 @@
+version: "0.1"
+
+name: "3 laws of Xmas"
+author: "Pontus Norrström"
+category: web
+description: You need to go to the source to get your head around this search..... too obvious? :-)
+
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 100
+
+connection_info: http://2021.santahack.xyz:42201
+
+flags:
+    - haxmas{w3b_ch4ll3ng3S_4r3_fuN_4nD_Int3R3st1Ng!}
+
+tags:
+    - web
+
+
+hints:
+    - beep boop

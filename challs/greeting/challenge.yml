@@ -1,0 +1,29 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "Greetings"
+author: "Björn Österman"
+category: crypto
+description: Do you want it wrapped?
+connection_info: nc 2021.santahack.xyz 42003
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 100
+
+
+
+flags:
+    - haxmas{IVers_should_be_different}
+
+tags:
+    - crypto
+
+files:
+    - src/greet_santa.py
+
+hints:
+    - AES uses 16 byte boundaries

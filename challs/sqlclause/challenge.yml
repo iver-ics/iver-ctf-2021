@@ -1,0 +1,25 @@
+version: "0.1"
+
+name: "SQL Clause"
+author: "Pontus Norrström"
+category: web
+description: |
+    He's making a database
+    He's sorting it twice
+    SELECT * from contacts WHERE behavior = 'nice'
+    SQL Clause is coming to town
+
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 100
+
+connection_info: http://2021.santahack.xyz:42204
+
+flags:
+    - haxmas{Pr3par3d_St4teMeNt5_4Re_A_MuS7}
+
+tags:
+    - web

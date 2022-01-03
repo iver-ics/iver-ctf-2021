@@ -1,0 +1,21 @@
+version: "0.1"
+
+name: "Magic Password"
+author: "Pontus Norrström"
+category: web
+description: Santa locked himself out of his super-duper-website. Can you help find some magic password?
+
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 100
+
+connection_info: http://2021.santahack.xyz:42203
+
+flags:
+    - haxmas{never-trust-automagic-type-conversions}
+
+tags:
+    - web

@@ -1,0 +1,23 @@
+name: "Wrapping Disaster"
+author: "Kalle Fagerberg"
+category: misc
+description:  Santas wrapping machine got bonkers and used all different papers it could find. Can you help unwrap this mess?
+
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 100
+
+flags:
+    - haxmas{you-wouldnt-tar-a-dev-stdin}
+
+tags:
+    - misc
+
+files:
+    - src/flag.tar.xz.b64.gz.br.zip.lz4.7z
+
+hints:
+    - 7zip is good, but not that good.

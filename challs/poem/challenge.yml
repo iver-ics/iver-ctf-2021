@@ -1,0 +1,28 @@
+name: "Poem for Santa"
+author: "Björn Österman"
+category: pwn
+description: Bringing Santa to tears.
+
+connection_info: nc 2021.santahack.xyz 42002
+
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 100
+
+flags:
+  - haxmas{drip_drip_drip}
+
+files:
+  - src/poem.c
+
+tags:
+  - pwn
+
+hints:
+    - Smash a stack
+
+state: visible
+version: "0.1"

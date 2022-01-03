@@ -1,0 +1,21 @@
+ # This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "Gift Bag 2"
+author: "Robert Teir"
+category: OSINT
+description: Can you find the real name of the hacker? haxmas{Firstname_Lastname}
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 100
+
+flags:
+    - haxmas{Oogie_Boogie}
+    - haxmas{oogie_boogie}
+
+tags:
+    - OSINT

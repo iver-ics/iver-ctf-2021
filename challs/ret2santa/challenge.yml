@@ -1,0 +1,29 @@
+name: "Return to Santa"
+author: "Björn Österman"
+category: pwn
+description: "Santa wants a win()"
+
+connection_info: nc 2021.santahack.xyz 42005
+
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 100
+
+flags:
+  - haxmas{return_those_packets}
+
+files:
+  - src/ret2santa.c
+  - src/ret2santa
+
+tags:
+  - pwn
+
+hints:
+    - What is the address of win()
+
+state: visible
+version: "0.1"

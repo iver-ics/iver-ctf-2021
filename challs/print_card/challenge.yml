@@ -1,0 +1,28 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "Print a Card"
+author: "Björn Österman"
+category: pwn
+description: Print that Santa
+connection_info: nc 2021.santahack.xyz 42001
+
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 100
+
+flags:
+    - haxmas{no_stack_secrets_from_printf}
+
+tags:
+    - pwn
+
+files:
+    - src/print_card.c
+
+hints:
+    - printf's nice :-)

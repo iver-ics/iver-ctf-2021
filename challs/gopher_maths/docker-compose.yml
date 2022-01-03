@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  chall:
+    build: src
+    environment:
+      CTF_BINDADDRESS: 0.0.0.0:70
+      CTF_PUBLICHOST: 20.91.139.56
+      CTF_PUBLICPORT: "70"
+    ports:
+      - 70:70
+    tty: true
+    volumes:
+      - ./src/flag.txt:/flag.txt

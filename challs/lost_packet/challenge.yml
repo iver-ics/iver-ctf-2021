@@ -1,0 +1,24 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "Lost packet"
+author: "Robert Teir"
+category: forensics
+description: The hacker that hacked santa downloaded two popular hacking tools, what are the filenames? haxmas{filename1.ext_filename2.ext}
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 100
+
+flags:
+    - haxmas{mimikatz_trunk.zip_lazagne.exe}
+    - haxmas{lazagne.exe_mimikatz_trunk.zip}
+
+files:
+    - src/pcap.zip
+
+tags:
+    - forensics

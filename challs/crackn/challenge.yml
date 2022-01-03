@@ -1,0 +1,26 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "Crack Open"
+author: "Björn Österman"
+category: crypto
+description: That present's gonna rock you!
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 100
+
+flags:
+    - haxmas{crackn_bell_rock}
+
+tags:
+    - misc
+
+files:
+    - src/crackn.zip
+
+hints:
+    - https://web.microsoftstream.com/channel/e8917cfb-9b9c-4c5b-ae53-3ae043587c72
