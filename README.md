@@ -69,6 +69,11 @@ Other's writeups:
 > If you write your own writeups and feel to share them, please add a PR to
 > this repository with link to your writeup above.
 
+## License
+
+This repository does not employ any open source license (yet). This means all
+content inside this repository falls under EU's copyright laws.
+
 ---
 
 Maintained by [Iver](https://www.iver.com/en).
